@@ -580,10 +580,7 @@
       color: var(--text-muted);
       line-height: 1.7;
     }
-    @media (max-width: 768px) {
-      #proof { padding: 60px 24px; }
-      .proof-grid { grid-template-columns: 1fr; gap: 36px; }
-    }
+    
 
     /* ─── WHY CITISERVE ──────────────────────────────────── */
     #why {
@@ -881,68 +878,9 @@
       .sectors-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 768px) {
-      .nav-inner { padding: 0 24px; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+    
 
-      #hero { min-height: 100svh; }
-      .hero-content { padding: 100px 24px 60px; }
-      .hero-content h1 { font-size: 36px; letter-spacing: -1px; }
-      .hero-sub { font-size: 15px; }
-      .hero-stats { display: none; }
-
-      #ticker { padding: 14px 0; overflow: hidden; }
-
-      #intro { padding: 60px 24px; }
-      .intro-stats { flex-direction: column; align-items: center; gap: 28px; }
-
-      #services { padding: 60px 24px; }
-      .services-grid { grid-template-columns: 1fr; gap: 0; }
-      .section-header h2 { font-size: 28px; }
-
-      #sectors { padding: 60px 24px; }
-      .sectors-grid { grid-template-columns: 1fr 1fr; }
-
-      #projects { padding: 60px 24px; }
-      .projects-layout { grid-template-columns: 1fr; }
-      .projects-image {
-      position: sticky;
-      top: 0;
-      align-self: stretch;
-      width: 380px;
-      overflow: hidden;
-      position: relative; display: none; }
-
-      #why { padding: 60px 24px; }
-      .why-layout { grid-template-columns: 1fr; gap: 40px; }
-      .why-left h2 { font-size: 28px; }
-
-      #accreditations { padding: 60px 24px; }
-      .accred-grid { flex-direction: column; }
-      .accred-block { min-width: unset; }
-
-      #contact { padding: 60px 24px; }
-      .contact-form { grid-template-columns: 1fr; }
-      .contact-form .full { grid-column: 1; }
-      .contact-inner h2 { font-size: 30px; }
-      .contact-details { flex-direction: column; gap: 24px; }
-
-      #footer { padding: 24px; }
-      .footer-row { grid-template-columns: 1fr; text-align: center; }
-      .footer-links { justify-content: center; }
-      .footer-copy { text-align: center; }
-
-      .why-left .section-tag { display: block; }
-    }
-
-    @media (max-width: 480px) {
-      .sectors-grid { grid-template-columns: 1fr; }
-      .hero-buttons { flex-direction: column; }
-      .contact-buttons { flex-direction: column; align-items: stretch; }
-      .contact-buttons .btn-primary,
-      .contact-buttons .btn-secondary { text-align: center; }
-    }
+    
   
     /* ─── OUR WORK ───────────────────────────────────────── */
     #our-work {
@@ -1016,7 +954,142 @@
       letter-spacing: 0.3px;
       line-height: 1.75;
     }
+
     @media (max-width: 768px) {
-      #our-work { padding: 60px 24px; }
-      .work-cell { height: 220px; }
+
+      /* ── GLOBAL ── */
+      html, body { overflow-x: hidden; max-width: 100%; }
+
+      /* ── NAV ── */
+      .nav-inner { padding: 0 16px; height: 56px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-logo .wordmark { font-size: 17px; }
+      .mobile-menu { padding: 20px 16px; }
+
+      /* ── HERO ── */
+      #hero { min-height: 85svh; }
+      .hero-content { padding: 80px 16px 40px; }
+      .hero-content h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.5px; }
+      .hero-sub { font-size: 13px; }
+      .hero-stats { display: none; }
+      .hero-buttons { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary { width: 48%; text-align: center; padding: 12px 8px; font-size: 13px; }
+
+      /* ── TICKER ── */
+      #ticker { padding: 10px 0; overflow: hidden; }
+
+      /* ── INTRO ── */
+      #intro { padding: 40px 16px; }
+      .intro-inner h2 { font-size: 22px; }
+      .intro-stats { flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: flex-start; }
+      .intro-stat { flex: 1 1 40%; }
+      .intro-stat .stat-big { font-size: 24px; }
+      .intro-stat .stat-desc { font-size: 12px; }
+
+      /* ── SERVICES ── */
+      #services { padding: 40px 16px; }
+      .section-header { margin-bottom: 24px; }
+      .section-header h2 { font-size: 22px; }
+      .section-header p { font-size: 13px; }
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 8px; background: none; border: none; }
+      .service-card { padding: 16px; border: 0.5px solid var(--border); }
+      .service-card svg { width: 28px !important; height: 28px !important; margin-bottom: 12px !important; }
+      .service-card h3 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+      .service-card p { font-size: 12px; line-height: 1.5; }
+
+      /* ── SECTORS ── */
+      #sectors { padding: 40px 16px; }
+      #sectors .section-header h2 { font-size: 22px; }
+      .sectors-grid { grid-template-columns: 1fr 1fr; gap: 8px; background: none; border: none; }
+      .sector-tile { padding: 14px; border: 0.5px solid var(--border); min-height: 120px; }
+      .sector-tile h3 { font-size: 12px; }
+      .sector-tile p { font-size: 11px; }
+      .sector-num { font-size: 9px; }
+
+      /* ── PROJECTS ── */
+      #projects { padding: 40px 16px; }
+      #projects .section-header h2 { font-size: 22px; }
+      .projects-layout { grid-template-columns: 1fr; gap: 0; }
+      .projects-image { display: none; }
+      .project-row { padding: 14px 12px; gap: 12px; }
+      .project-name { font-size: 13px; }
+      .project-desc { font-size: 11px; }
+      .project-value { font-size: 13px; }
+      .sector-tag { font-size: 9px; }
+      .award-badge { font-size: 9px; }
+      .project-meta { min-width: 100px; }
+
+      /* ── PROOF STATS ── */
+      #proof { padding: 40px 16px; }
+      .proof-grid { grid-template-columns: 1fr; gap: 24px; }
+      .proof-block h3 { font-size: 24px; }
+      .proof-block p { font-size: 13px; }
+
+      /* ── OUR WORK ── */
+      #our-work { padding: 40px 16px; }
+      .ow-heading { font-size: 22px; }
+      .ow-sub { font-size: 13px; margin-bottom: 24px; }
+      .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 160px);
+        gap: 3px;
+      }
+      .work-cell { height: 160px; }
+      .ow-caption { font-size: 12px; margin-top: 20px; }
+
+      /* ── WHY CITISERVE ── */
+      #why { padding: 40px 16px; }
+      .why-layout { grid-template-columns: 1fr; gap: 24px; }
+      .why-left h2 { font-size: 22px; }
+      .why-left .section-tag { display: block; }
+      .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .why-item { padding: 14px; border: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+      .why-item:first-child { border-top: 0.5px solid var(--border); }
+      .why-item h4 { font-size: 13px; margin-bottom: 4px; }
+      .why-item p { font-size: 11px; line-height: 1.6; }
+
+      /* ── ACCREDITATIONS ── */
+      #accreditations { padding: 40px 16px; }
+      #accreditations h2 { font-size: 22px; }
+      .accred-grid {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        gap: 8px;
+        background: none;
+        border: none;
+        padding-bottom: 8px;
+      }
+      .accred-grid::-webkit-scrollbar { display: none; }
+      .accred-block { min-width: 140px; flex-shrink: 0; padding: 16px; border: 0.5px solid var(--border); }
+      .accred-block h4 { font-size: 12px; }
+      .accred-block p { font-size: 11px; }
+
+      /* ── CONTACT ── */
+      #contact { padding: 40px 16px; }
+      .contact-inner h2 { font-size: 22px; }
+      .contact-inner > p { font-size: 13px; }
+      .contact-form { grid-template-columns: 1fr; }
+      .contact-form .full { grid-column: 1; }
+      .contact-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .contact-buttons { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+      .contact-buttons .btn-primary,
+      .contact-buttons .btn-secondary { flex: 1 1 45%; text-align: center; font-size: 13px; padding: 12px 8px; }
+      .form-group input,
+      .form-group textarea,
+      .form-group select { padding: 10px 12px; font-size: 13px; }
+
+      /* ── FOOTER ── */
+      #footer { padding: 20px 16px; }
+      .footer-row { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+      .footer-links { justify-content: center; flex-wrap: wrap; gap: 12px; font-size: 11px; }
+      .footer-copy { text-align: center; font-size: 11px; }
+      .footer-strip { font-size: 9px; letter-spacing: 1px; }
+      .footer-credit { font-size: 10px; }
+
     }
+
